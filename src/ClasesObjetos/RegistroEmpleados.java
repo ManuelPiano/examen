@@ -4,8 +4,7 @@
  */
 package ClasesObjetos;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
+import java.util.Scanner;
 
 /**
  *
@@ -13,28 +12,42 @@ import java.io.InputStreamReader;
  */
 public class RegistroEmpleados {
     public static void main(String[] args) {
-        Empleado emp = new Empleado();
-        BufferedReader leer =new BufferedReader (new InputStreamReader(System.in));
-        try{
-            //valores
-            System.out.println("Codigo:");
-            long codigo = Long.parseLong(leer.readLine());
-            System.out.println("Nombre del empleado: ");
-            String nombre = leer.readLine();
-            System.out.println("Apellidos:");
-            String apellido = leer.readLine();
-            
-            
-            emp.setcodigoEmpleado(codigo);
-            emp.setnombreEmpleado(nombre);
-            emp.setApellidosEmpleado(apellido);
-            
-            System.out.println("---Recuperando Valores---");
-            System.out.println("Codigo empleado: " +emp.getCodigo());
-            System.out.println("Nombres: " + emp.getNombre());
-            System.out.println("Apellidos" + emp.getApellido());
-        }catch(Exception e){
-            System.out.println(e.getMessage());
-        }
+       String datosPersonales;
+       Empleado Datos = new Empleado();
+       double tpempleado;
+       String ubicaciones;
+       Scanner leer = new Scanner(System.in);
+       
+       
+        System.out.println("Escriba el nombre: ");
+        Datos.setNombre(leer.nextLine());
+        System.out.println("Escriba el codigo: ");
+        Datos.setCodigo(Integer.parseInt(leer.nextLine()));
+        System.out.println("Escriba la Edad: ");
+        Datos.setEdad(Integer.parseInt(leer.nextLine()));
+        System.out.println("Escriba la direccion: ");
+        Datos.setDireccion(leer.nextLine());
+        System.out.println("Escriba el cargo: ");
+        Datos.setCargo(leer.nextLine());
+        System.out.println("Sueldo base: ");
+        Datos.setSueldobase(Integer.parseInt(leer.nextLine()));
+        System.out.println("Ingrese el dia: ");
+        Datos.setDD(Integer.parseInt(leer.nextLine()));
+        System.out.println("Ingrese el mes: ");
+        Datos.setMM(Integer.parseInt(leer.nextLine()));
+        System.out.println("Ingrese el año: ");
+        Datos.setYYYY(Integer.parseInt(leer.nextLine()));
+        System.out.println("Que tipo de empleado es?: ");
+        Datos.setCalculo(Double.parseDouble(leer.nextLine()));
+        
+        datosPersonales = Datos.datosEmp(Datos);
+        
+        System.out.println(datosPersonales);
+        tpempleado = Datos.tipoempleado();
+        System.out.println(tpempleado);
+        System.out.println("----------------------------------------");
+        
+        ubicaciones = Datos.datosEdificio();
+        System.out.println(ubicaciones);
     }
 }
