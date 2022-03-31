@@ -12,7 +12,7 @@ public class Edificio {
     String datosEdificio(){
         String informacion = "";
         
-        informacion += "la ubicacion del edificio es: Zacatecoluca" + "\n";
+        informacion += "la ubicacion del edificio es: Zacatecoluca, La Paz" + "\n";
         informacion += "El nombre es: ITCA-FEPADE" + "\n";
         informacion += "cantidad de departamentos es: 20" + "\n";
         informacion += "cantidad de pisos es: 3" + "\n";
