@@ -37,7 +37,7 @@ public class RegistroEmpleados {
         Datos.setMM(Integer.parseInt(leer.nextLine()));
         System.out.println("Ingrese el año: ");
         Datos.setYYYY(Integer.parseInt(leer.nextLine()));
-        System.out.println("Que tipo de empleado es?: ");
+        System.out.println("Que tipo de empleado es? 1:administrativo 2: Servicio" );
         Datos.setCalculo(Double.parseDouble(leer.nextLine()));
         
         datosPersonales = Datos.datosEmp(Datos);
