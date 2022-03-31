@@ -127,12 +127,13 @@ public class Empleado extends Edificio {
    }
    
    double calcularSalario(Empleado A){
-       double isss, afp, renta, salario;
+       double isss, afp, renta, salario, descuento;
        if (this.calculo == 1){
            isss = (sueldobase * 0.075);
            afp = (sueldobase * 0.15);
            renta = (sueldobase* 0.10);
-           salario = (sueldobase - (isss-afp-renta));
+           descuento=isss-afp-renta;
+           salario = (sueldobase - isss - afp - renta);
            return salario;
        }else if (this.calculo == 2){
            renta = (sueldobase * 0.10);
